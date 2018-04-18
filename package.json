@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.16.3",
+    "serverless-http": "^1.5.5",
+    "serverless-offline": "^3.20.2"
+  },
+  "scripts": {
+    "dev": "sls offline start --port 4500"
+  }
+}
