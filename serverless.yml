@@ -10,7 +10,4 @@ provider:
 plugins:
   - serverless-offline
 
-functions:  
-  helloworld:
-    handler: src/helloworld.handler
     
