@@ -10,9 +10,20 @@ provider:
 plugins:
   - serverless-offline
 
-functions:
-  api:
-    handler: src/api/index.handler
+functions:  
+  todos:
+    handler: src/api/todos.handler
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http:
+          path: todo
+          method: get
+  todo:
+    handler: src/api/todo.handler
+    events:
+      - http:
+          path: todo/{todo}
+          method: get
+          request:
+            parameters:
+              paths:
+                todo: true
