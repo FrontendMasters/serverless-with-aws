@@ -11,9 +11,6 @@ plugins:
   - serverless-offline
 
 functions:  
-  todos:
-    handler: src/api/todos.handler
-    
-  todo:
-    handler: src/api/todo.handler
+  helloworld:
+    handler: src/helloworld.handler
     
