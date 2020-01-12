@@ -1,4 +1,3 @@
 module.exports.handler = (evt, ctx, done) => {
-  console.log(`${evt.message}`);
-  done();
+  done(new Error('failed'), evt.message);
 }
