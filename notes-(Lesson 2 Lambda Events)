@@ -1,0 +1,4 @@
+1. sync lambda functions - when we call a lambda and wait the response comeback
+   async lambda functions - when we call a lambda and wait nothing like response (forget about it) like send email
+
+

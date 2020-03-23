@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "express": "^4.16.3",
-    "serverless-http": "^1.5.5",
-    "serverless-offline": "^3.20.2"
+    "express": "^4.17.1",
+    "serverless-http": "^2.3.2",
+    "serverless-offline": "^6.0.0"
   },
   "scripts": {
     "dev": "sls offline start --port 4500",
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^22.4.3",
-    "supertest": "^3.0.0"
+    "jest": "^25.1.0 ",
+    "supertest": "^4.0.2"
   }
 }

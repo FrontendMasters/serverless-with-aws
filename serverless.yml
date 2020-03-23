@@ -2,9 +2,9 @@ service: serverless
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  profile: femasters
-  region: us-west-1
+  runtime: nodejs12.x
+#  profile: femasters
+#  region: eu-west-1
   stage: dev
 
 plugins:
@@ -12,8 +12,15 @@ plugins:
 
 functions:  
   todos:
-    handler: src/api/todos.handler
+    handler: src/api/todos.todos
+    events:
+      - http:
+          path: todos
+          method: GET
     
   todo:
-    handler: src/api/todo.handler
-    
+    handler: src/api/todo.todo
+    events:
+      - http:
+          path: todo
+          method: GET
