@@ -2,12 +2,20 @@ service: serverless
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  profile: femasters
+  runtime: nodejs16.x
+  # profile: femasters
   region: us-west-1
   stage: dev
 
-plugins:
-  - serverless-offline
+# plugins:
+#   - serverless-offline
 
+functions:
+  # NB. the name of the functions here do *not* have to match filenames where handler is stored
+  hello:
+    # NB.2 however the handler nested syntax has to match what the exported module is named
+    handler: src/helloworld.handler
+  bye:
+  # NB.3 notice the .lambda here, since byeworld.js is exporting `exports.module.lambda`
+    handler: src/byeworld.lambda
     
