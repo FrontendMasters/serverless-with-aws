@@ -2,12 +2,20 @@ service: serverless
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  profile: femasters
+  runtime: nodejs18.12
+  # profile: femasters
   region: us-west-1
   stage: dev
+
 
 plugins:
   - serverless-offline
 
-    
+functions:
+  # name of the function on AWS
+  # can be invoked locally using:
+    # sls invoke local -f helloworld 
+    helloworld:
+  # where to find the function
+  # needs the full path!
+      handler: src/helloworld.handler
