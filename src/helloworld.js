@@ -5,13 +5,14 @@
 'use strict';
 
 module.exports.handler = (event, context, callback) => {
-    // const response = {
-    //     statusCode: 200,
-    //     body: JSON.stringify({
-    //         message: 'Hello World',
-    //         input: event,
-    //     }),
-    // };
+    const response = {
+        statusCode: 200,
+        body: JSON.stringify({
+            message: 'Hello World',
+            input: event,
+        }),
+    };
 
-    callback(null, 'hello');
+    callback(null, response);
+    // callback(null, event)
 };
